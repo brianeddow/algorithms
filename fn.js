@@ -63,25 +63,6 @@ var arr = [1,2,3,4,5,6,7,8,9];
 
 // console.log(binSearch(arr,7,0,arr.length-1));
 
-function insertionSort(arr)
-{
-	for(var i=0; i<arr.length; i++)
-	{
-		var k = i;
-		while(k > 0 && arr[k] < arr[k-1])
-		{
-			var temp = arr[k];
-			arr[k] = arr[k-1];
-			arr[k-1] = temp;
-			k--;
-		}
-	}
-}
-
-var arr= [9,8,7,2,6,5,4,1,3];
-// insertionSort(arr);
-// console.log(arr);
-
 function anagrams(s1,s2)
 {
 	if(s1.length != s2.length)
@@ -220,46 +201,6 @@ function DLL() {
 
 var list = new DLL();
 // list.append(1).append(2).append(3).insert(3,2.5).append(4).insert(4,3.5).remove(2.5).remove(3.5).nodes();
-
-function selectionSort(arr) {
-	var i, j, min_idx;
-
-	for(i = 0; i<arr.length-1; i++) {
-		min_idx = i
-		for(j = i+1; j<arr.length; j++) {
-			if(arr[j] < arr[min_idx]) {
-				min_idx = j
-			}
-		}
-		if(arr[min_idx] < arr[i]) {
-			var tmp = arr[i];
-			arr[i] = arr[min_idx];
-			arr[min_idx] = tmp;
-		}
-	}
-
-	return arr;
-}
-
-// console.log(selectionSort([-1,0,7,6,5,4,3,2,1]));
-
-function insertionSort(arr) {
-	var i, k;
-
-	for(i = 1; i<arr.length; i ++) {
-		k = i;
-		while(k > 0 && arr[k] < arr[k-1]) {
-			var tmp = arr[k];
-			arr[k] = arr[k-1];
-			arr[k-1] = tmp;
-			k--;
-		}
-	}
-
-	return arr;
-}
-
-// console.log(insertionSort([4,3,2,1]));
 
 function Node(val) {
 	this.val = val;
